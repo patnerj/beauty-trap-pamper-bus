@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO METADATA -->
@@ -74,7 +74,7 @@
                         script: ['"Great Vibes"', 'cursive'],
                     },
                     backgroundImage: {
-                        'shimmer': "linear-gradient(45deg, rgba(212, 175, 55, 0.1) 25%, transparent 25%, transparent 50%, rgba(212, 175, 55, 0.1) 50%, rgba(212, 175, 55, 0.1) 75%, transparent 75%, transparent)",
+                        'shimmer': "linear-gradient(45deg, rgba(212, 175, 55, 0.1) 25%, transparent 25%, transparent 50%, rgba(212, 175, 55, 0.1) 50%, rgba(212, 175, 55, 0.1) 75%, transparent 75%, transparent)"
                     }
                 }
             }
@@ -83,15 +83,12 @@
 
     <style>
         html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-
         .fade-up { animation: fadeUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
         .delay-100 { animation-delay: 0.1s; }
         .delay-200 { animation-delay: 0.2s; }
-
         @keyframes fadeUp {
             to { opacity: 1; transform: translateY(0); }
         }
-
         .btn-luxe {
             position: relative;
             overflow: hidden;
@@ -111,14 +108,12 @@
         .btn-luxe:hover::after {
             left: 100%;
         }
-
         .img-frame {
-            border: 2px solid #d4af37; 
+            border: 2px solid #d4af37;
             padding: 12px;
             background: white;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
-
         .circle-image-container {
             overflow: hidden;
             border-radius: 50%;
@@ -136,14 +131,13 @@
         .circle-image-container:hover .circle-image {
             transform: scale(1.1);
         }
-
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #fff0f5; }
         ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 4px; }
     </style>
 </head>
-<body class="font-sans text-bt-text bg-white selection:bg-bt-pink-main selection:text-white">
+<body class="font-sans text-bt-text bg-white">
   <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <script type="module" src="./src/main.tsx"></script>
 </body>
 </html>
