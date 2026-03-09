@@ -131,12 +131,81 @@
         .circle-image-container:hover .circle-image {
             transform: scale(1.1);
         }
+        .pamper-gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            border: 2px solid #f3e5ab;
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            background: #fff;
+        }
+        .pamper-gallery-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 18px 35px rgba(212, 175, 55, 0.35);
+        }
+        .pamper-gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 4 / 3;
+            transition: transform 0.45s ease, filter 0.45s ease;
+        }
+        .pamper-gallery-card:hover .pamper-gallery-image {
+            transform: scale(1.08);
+            filter: saturate(1.08);
+        }
+        .pamper-video {
+            width: 100%;
+            max-width: 420px;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            border-radius: 1.25rem;
+            border: 3px solid #f3e5ab;
+            box-shadow: 0 18px 40px rgba(212, 175, 55, 0.25);
+        }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #fff0f5; }
         ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 4px; }
     </style>
 </head>
 <body class="font-sans text-bt-text bg-white">
+  <section class="py-16 px-6 sm:px-10 bg-gradient-to-b from-bt-pink-light to-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 fade-up">
+        <p class="font-script text-4xl text-bt-gold">Beauty Trap</p>
+        <h2 class="font-serif text-3xl sm:text-4xl text-bt-black mt-2">Pamper Bus Experience</h2>
+        <p class="max-w-2xl mx-auto mt-4 text-lg text-bt-text">
+          Step inside our luxury pink and gold pamper paradise, where glam stations, sparkle and celebration come together for an unforgettable day.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+        <figure class="pamper-gallery-card fade-up delay-100">
+          <img src="./pamperbus_owner.jpeg" alt="Beauty Trap pamper bus owner inside the luxury setup" class="pamper-gallery-image" loading="lazy">
+        </figure>
+        <figure class="pamper-gallery-card fade-up delay-200">
+          <img src="./pamperbus_place.jpeg" alt="Pamper bus party area with pink and gold decor" class="pamper-gallery-image" loading="lazy">
+        </figure>
+        <figure class="pamper-gallery-card fade-up delay-100">
+          <img src="./pamperbus_view.jpeg" alt="Exterior view of the Beauty Trap pamper bus" class="pamper-gallery-image" loading="lazy">
+        </figure>
+        <figure class="pamper-gallery-card fade-up delay-200">
+          <img src="./pampering_childs.jpeg" alt="Children enjoying pampering experience on the bus" class="pamper-gallery-image" loading="lazy">
+        </figure>
+        <figure class="pamper-gallery-card sm:col-span-2 lg:col-span-1 fade-up delay-100">
+          <img src="./pamperbus pamphalet.jpeg" alt="Beauty Trap pamper bus pamphlet details" class="pamper-gallery-image" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="mt-12 flex justify-center fade-up delay-200">
+        <video class="pamper-video" autoplay muted loop playsinline controls aria-label="Beauty Trap pamper bus tour video">
+          <source src="./pamper_bus_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
   <div id="root"></div>
   <script type="module" src="./src/main.tsx"></script>
 </body>
